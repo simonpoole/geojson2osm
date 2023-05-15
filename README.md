@@ -8,7 +8,7 @@ To run, get the fat jar (currently you need to build this yourself) in this repo
 
     -i,--input <arg>    input GeoJSON file, default: standard in
     -o,--output <arg>   output OSM XML file, default: standard out
-    -u,--upload         generate a JOSM specic attribute that will allow uploading the data
+    -u,--upload         generate a JOSM specific attribute that will allow uploading the data
 
 ## Caveats
 
@@ -17,5 +17,4 @@ To run, get the fat jar (currently you need to build this yourself) in this repo
 - It will punt on LineString Features with more than 2000 vertices
 - OSM way nodes are de-duplicated (this should probably be an option)
 
-
-ALl of the above is fixable, it just hasn't been done yet.
+All of the above is fixable, it just hasn't been done yet.
