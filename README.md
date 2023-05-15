@@ -4,6 +4,8 @@ To run, get the fat jar (currently you need to build this yourself) in this repo
 
     java -cp geojson2osm-all-0.1.0.jar ch.poole.osm.geojson2osm.Convert -i ...
     
+The created OSM elements get negative ids and the files should be usable in JOSM, Vespucci and any other editor that allow loading OSM data.
+    
 ### Usage
 
     -i,--input <arg>    input GeoJSON file, default: standard in
