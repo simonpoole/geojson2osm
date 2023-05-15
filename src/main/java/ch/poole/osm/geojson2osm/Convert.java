@@ -102,7 +102,9 @@ public class Convert {
             List<Feature> features = fc.features();
             if (features != null) {
                 for (Feature f : features) {
-                    collectElement(f);
+                    if (f != null) {
+                        collectElement(f);
+                    }
                 }
             } else {
                 // Retrying as Feature
@@ -138,10 +140,9 @@ public class Convert {
             serializer.endDocument();
         } catch (OutOfMemoryError oom) {
             System.err.println("Input could not be processed " + oom.getMessage());
-        } catch (com.google.gson.JsonSyntaxException jsex) {
-            System.err.println("Input could not be processed " + jsex.getMessage());
         } catch (Exception e) {
             System.err.println("Input could not be processed " + e.getMessage());
+            e.printStackTrace(System.err);
         }
     }
 
